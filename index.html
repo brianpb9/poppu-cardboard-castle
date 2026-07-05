@@ -341,21 +341,21 @@ registerAsset('bg-celebration','assets/bg-celebration.webp',(ctx,x,y,w,h)=>{
   ctx.fillStyle=grad;ctx.fillRect(x,y,w,h);
 });
 
-// Cardboard pieces
-registerAsset('piece-box-brown','assets/piece-box-brown.png',(ctx,x,y,w,h)=>drawCardboardBox(ctx,x,y,w,h,'#C4946C'));
-registerAsset('piece-box-red','assets/piece-box-brown.png',(ctx,x,y,w,h)=>drawCardboardBox(ctx,x,y,w,h,'#E74C3C'));
-registerAsset('piece-box-blue','assets/piece-box-brown.png',(ctx,x,y,w,h)=>drawCardboardBox(ctx,x,y,w,h,'#5DADE2'));
-registerAsset('piece-triangle-yellow','assets/piece-triangle-yellow.png',(ctx,x,y,w,h)=>drawTriangle(ctx,x+w/2,y+h/2,Math.min(w,h),'#F4D03F'));
-registerAsset('piece-triangle-green','assets/piece-triangle-yellow.png',(ctx,x,y,w,h)=>drawTriangle(ctx,x+w/2,y+h/2,Math.min(w,h),'#58D68D'));
-registerAsset('piece-cylinder-purple','assets/piece-cylinder-purple.png',(ctx,x,y,w,h)=>drawCylinder(ctx,x+w/2,y+h/2,w,h,'#9B59B6'));
-registerAsset('piece-cylinder-orange','assets/piece-cylinder-purple.png',(ctx,x,y,w,h)=>drawCylinder(ctx,x+w/2,y+h/2,w,h,'#F39C12'));
-registerAsset('piece-cone-pink','assets/piece-cone-pink.png',(ctx,x,y,w,h)=>drawCone(ctx,x+w/2,y+h/2,w,h,'#FFB6C1'));
-registerAsset('piece-cone-teal','assets/piece-cone-pink.png',(ctx,x,y,w,h)=>drawCone(ctx,x+w/2,y+h/2,w,h,'#48C9B0'));
-registerAsset('piece-arch-brown','assets/piece-arch-brown.png',(ctx,x,y,w,h)=>drawArch(ctx,x+w/2,y+h/2,w,h,'#C4946C'));
-registerAsset('piece-wall-brown','assets/piece-wall-brown.png',(ctx,x,y,w,h)=>drawWall(ctx,x+w/2,y+h/2,w,h,'#C4946C'));
+// Cardboard pieces — RGBA versions from Higgsfield pipeline
+registerAsset('piece-box-brown','assets/piece-box-brown-rgba.png',(ctx,x,y,w,h)=>drawCardboardBox(ctx,x,y,w,h,'#C4946C'));
+registerAsset('piece-box-red','assets/piece-box-red-rgba.png',(ctx,x,y,w,h)=>drawCardboardBox(ctx,x,y,w,h,'#E74C3C'));
+registerAsset('piece-box-blue','assets/piece-box-blue-rgba.png',(ctx,x,y,w,h)=>drawCardboardBox(ctx,x,y,w,h,'#5DADE2'));
+registerAsset('piece-triangle-yellow','assets/piece-triangle-yellow-rgba.png',(ctx,x,y,w,h)=>drawTriangle(ctx,x+w/2,y+h/2,Math.min(w,h),'#F4D03F'));
+registerAsset('piece-triangle-green','assets/piece-triangle-green-fal.png',(ctx,x,y,w,h)=>drawTriangle(ctx,x+w/2,y+h/2,Math.min(w,h),'#58D68D'));
+registerAsset('piece-cylinder-purple','assets/piece-cylinder-purple-rgba.png',(ctx,x,y,w,h)=>drawCylinder(ctx,x+w/2,y+h/2,w,h,'#9B59B6'));
+registerAsset('piece-cylinder-orange','assets/piece-cylinder-orange-fal.png',(ctx,x,y,w,h)=>drawCylinder(ctx,x+w/2,y+h/2,w,h,'#F39C12'));
+registerAsset('piece-cone-pink','assets/piece-cone-pink-rgba.png',(ctx,x,y,w,h)=>drawCone(ctx,x+w/2,y+h/2,w,h,'#FFB6C1'));
+registerAsset('piece-cone-teal','assets/piece-cone-teal-fal.png',(ctx,x,y,w,h)=>drawCone(ctx,x+w/2,y+h/2,w,h,'#48C9B0'));
+registerAsset('piece-arch-brown','assets/piece-arch-brown-rgba.png',(ctx,x,y,w,h)=>drawArch(ctx,x+w/2,y+h/2,w,h,'#C4946C'));
+registerAsset('piece-wall-brown','assets/piece-wall-brown-rgba.png',(ctx,x,y,w,h)=>drawWall(ctx,x+w/2,y+h/2,w,h,'#C4946C'));
 
-// Characters
-registerAsset('poppu-play','assets/test-poppu-play.png',(ctx,x,y,w,h)=>{
+// Characters — RGBA versions
+registerAsset('poppu-play','assets/poppu-play-rgba.png',(ctx,x,y,w,h)=>{
   const cx=x+w/2,cy=y+h/2,r=Math.min(w,h)/2;
   // Simple Poppu procedural
   ctx.fillStyle='#F6EAD6';ctx.beginPath();ctx.arc(cx,cy-r*0.3,r*0.55,0,Math.PI*2);ctx.fill(); // head
@@ -374,7 +374,7 @@ registerAsset('poppu-play','assets/test-poppu-play.png',(ctx,x,y,w,h)=>{
   ctx.fillStyle='rgba(255,182,193,0.5)';ctx.beginPath();ctx.arc(cx-r*0.25,cy-r*0.2,r*0.08,0,Math.PI*2);ctx.fill();
   ctx.beginPath();ctx.arc(cx+r*0.25,cy-r*0.2,r*0.08,0,Math.PI*2);ctx.fill();
 });
-registerAsset('peeky-tutorial','assets/peeky-tutorial.png',(ctx,x,y,w,h)=>{
+registerAsset('peeky-tutorial','assets/peeky-tutorial-rgba.png',(ctx,x,y,w,h)=>{
   const cx=x+w/2,cy=y+h/2,r=Math.min(w,h)/2;
   ctx.fillStyle='#FFF44F';ctx.beginPath();ctx.arc(cx,cy,r*0.7,0,Math.PI*2);ctx.fill();
   ctx.fillStyle='#FF8C00';ctx.beginPath();ctx.moveTo(cx+r*0.2,cy-r*0.05);ctx.lineTo(cx+r*0.45,cy);ctx.lineTo(cx+r*0.2,cy+r*0.05);ctx.closePath();ctx.fill();
@@ -382,7 +382,7 @@ registerAsset('peeky-tutorial','assets/peeky-tutorial.png',(ctx,x,y,w,h)=>{
   ctx.beginPath();ctx.arc(cx+r*0.15,cy-r*0.15,r*0.06,0,Math.PI*2);ctx.fill();
   ctx.strokeStyle='#333';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(cx,cy,r*0.7,0,Math.PI*2);ctx.stroke();
 });
-registerAsset('puffy-sticker','assets/puffy-sticker.png',(ctx,x,y,w,h)=>{
+registerAsset('puffy-sticker','assets/puffy-sticker-rgba.png',(ctx,x,y,w,h)=>{
   const cx=x+w/2,cy=y+h/2,r=Math.min(w,h)/2;
   ctx.fillStyle='#FFF';ctx.beginPath();ctx.arc(cx,cy-r*0.1,r*0.35,0,Math.PI*2);ctx.fill();
   ctx.beginPath();ctx.arc(cx-r*0.25,cy+r*0.1,r*0.2,0,Math.PI*2);ctx.fill();
